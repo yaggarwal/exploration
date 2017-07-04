@@ -1,0 +1,2464 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 ArialMT;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\fmodern\fcharset0 CourierNewPS-BoldMT;\f4\fswiss\fcharset0 Helvetica;\f5\fmodern\fcharset0 CourierNewPS-BoldItalicMT;
+\f6\froman\fcharset0 Times-Roman;\f7\fnil\fcharset0 Calibri;\f8\fmodern\fcharset0 Courier;
+\f9\fswiss\fcharset0 Impact;\f10\ftech\fcharset77 Symbol;\f11\fnil\fcharset204 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red183\green36\blue36;\red95\green21\blue22;\red38\green38\blue38;
+\red106\green148\blue216;\red143\green143\blue143;\red201\green198\blue187;\red101\green101\blue101;\red97\green0\blue70;
+\red109\green109\blue109;\red56\green69\blue184;\red37\green0\blue255;\red30\green61\blue134;\red81\green81\blue81;
+\red214\green136\blue134;\red36\green62\blue5;\red95\green255\blue0;\red38\green12\blue102;\red55\green101\blue0;
+\red50\green138\blue0;\red127\green0\blue85;\red42\green0\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid202\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid301\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid501\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid601\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid701\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}}
+\margl1440\margr1440\vieww25100\viewh17260\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs44 \cf2 What is Mocking in unit Testing?\
+\pard\pardeftab720\sl400
+{\field{\*\fldinst{HYPERLINK "http://www.blogger.com/share-post.g?blogID=666801272201508188&postID=4171424507380501192&target=pinterest"}}{\fldrslt 
+\f1\fs26 \cf3 \
+}}\pard\pardeftab720\sl360
+
+\f1\b\fs30 \cf4 Third Party Objects:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls1\ilvl0
+\b0\fs26 \cf4 {\listtext	\'95	}You have a class \cf5 View\cf4  that uses a third party class\cf5  DBManager\cf4 .\
+{\listtext	\'95	}The View gets a name from \cf5 DBManager\cf4 , converts it into lower case and returns it.\'a0\
+{\listtext	\'95	}The \cf5 DBManager \cf4 contacts a Database and pulls the data for you.\
+{\listtext	\'95	}But, you want to test \cf5 View\cf4 's functionality without being bothered about how \cf5 DBManager\cf4  actually gets those names.\
+\pard\pardeftab720\sl360
+\cf4 \'a0The code for above looks like this:\
+\
+\pard\pardeftab720\sl220\qc
+
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  View \{\
+\'a0\
+\'a0DBManager dbManager = 
+\f3\b \cf9 new
+\f2\b0 \cf0  DBManager();\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String processName()\{\
+\'a0\'a0\'a0\
+\'a0\'a0String name = dbManager.getName();\
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0 \'a0 name.toLowerCase(); \
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 How do we test now? When we test we do not want the \cf5 DBManager\cf4  to contact the DB and get it for us.Its waaaay too an overhead for us to create a DB just for testing.\
+If you have guessed it, its right! You need to mock 
+\b getName 
+\b0 of 
+\b dbManger 
+\b0 into returning a String (which you may want to return different values for different different test cases??) that we can assert is giving us a correct lowercase value.\
+\
+So the JUnit test looks something like this:\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/05/what-is-mocking-in-unit-testing.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth16200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  ViewTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testProcessName()\{\
+\'a0\'a0\cf11 /* Code to mock dbManager.getName \cf0 \
+\'a0\'a0\'a0\cf11 * to return "Anoop" goes here\cf0 \
+\'a0\'a0\'a0\cf11 */\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0View view= 
+\f3\b \cf9 new
+\f2\b0 \cf0  View();\
+\'a0\'a0String name = view.processName();\cf11 // here internally dbmanager returns "Anoop" because its mocked\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0assertEquals(\cf12 "The returned name should be anoop"\cf0 ,\cf12 "anoop"\cf0 ,name);\
+\'a0\}\
+\'a0\'a0\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 So basically mocking is, as the name says, redefining the behaviour of an object or method to imitate or modify the original implementation to accomodate our test cases.\
+\
+There are many mocking tools out there - JMockit, Mockito, EasyMock, PowerMock etc..\
+\
+The two ways of mocking are either by the proxy apis or the instrumentation APIs. There's a lot we can talk about these two but that's for another post.\
+\
+\
+\
+\pard\pardeftab720
+
+\f0\fs44 \cf2 JMockit Tutorial: How does JMockit support mocking?\
+\
+\pard\pardeftab720\sl360
+
+\f1\fs26 \cf4 JMockit is a java framework for mocking objects in JUnit testing. It uses the instrumentation apis that modify the bytecode during run time to dynamically create classes. The API model\'a0can be seen {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/about.html"}}{\fldrslt \cf3 here}}.\
+\
+The following are short descriptions about the most used tools offered by JMockit:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls2\ilvl0
+\fs28 \cf13 {\listtext	1.	}JMockit Expectations:
+\fs26 \cf4  This class is the most used for a mocking the results of a\'a0 method by specifying what is 
+\f4\i expected 
+\f1\i0 when a particular method is invoked. JMockit names the setting of expectations as 
+\f4\i record
+\f1\i0  phase and when the actual call to the method happens, its called the 
+\f4\i replay
+\f1\i0  phase. Thus the jargon record-replay model. The object/class whose method is going to be mocked should be annotated using the
+\f4\i @Mocked
+\f1\i0  annotation in the class scope or should be\'a0 declared locally\'a0 in the expectations block.\uc0\u8232 The following example will make all the mumbo jumbo above clear.\
+{\listtext	2.	}\
+{\listtext	3.	}
+\f2 \cf14 /************* "Person.java" *********/\cf4 \
+\pard\pardeftab720\sl280
+\ls2\ilvl0
+\f3\b \cf9 {\listtext	4.	}public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 Person \{\cf4 \
+{\listtext	5.	}\'a0\
+{\listtext	6.	}\'a0\cf0 String name = \cf12 "Abhi"\cf4  \cf0 ;\cf4 \
+{\listtext	7.	}\'a0\
+{\listtext	8.	}\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getName() \{\cf4 \
+{\listtext	9.	}\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  \cf0 name;\cf4 \
+{\listtext	10.	}\'a0\cf0 \}\cf4 \
+{\listtext	11.	}\'a0\
+{\listtext	12.	}\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 void
+\f2\b0 \cf4  \cf0 setName(String name) \{\cf4 \
+{\listtext	13.	}\'a0\'a0
+\f3\b \cf9 this
+\f2\b0 \cf0 .name = name;\cf4 \
+{\listtext	14.	}\'a0\cf0 \}\cf4 \
+{\listtext	15.	}\'a0\
+\pard\pardeftab720\sl280
+\ls2\ilvl0\cf0 {\listtext	16.	}\}\cf4 \
+\pard\pardeftab720\sl280
+\ls2\ilvl0\cf14 {\listtext	17.	}/************* "Department.java" *********/\cf4 \
+\pard\pardeftab720\sl280
+\ls2\ilvl0
+\f3\b \cf9 {\listtext	18.	}public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 Department\{\cf4 \
+{\listtext	19.	}\'a0\cf0 Person person = 
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Person();\cf11 //Person is the 'collaborator'- a fancy name for third party object\cf4 \
+{\listtext	20.	}\'a0\'a0\
+{\listtext	21.	}\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getPersonName()\{\cf4 \
+{\listtext	22.	}\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  \cf0 person.getName();\cf4 \
+{\listtext	23.	}\'a0\cf0 \}\cf4 \
+\pard\pardeftab720\sl280
+\ls2\ilvl0\cf0 {\listtext	24.	}\}\cf4 \
+{\listtext	25.	}\'a0\
+\pard\pardeftab720\sl280
+\ls2\ilvl0\cf14 {\listtext	26.	}/************* "DepartmentTest.java" *********/\cf4 \
+\pard\pardeftab720\sl280
+\ls2\ilvl0
+\f3\b \cf9 {\listtext	27.	}public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 DepartmentTest\{\cf4 \
+{\listtext	28.	}\'a0\cf10 @Mocked\cf4 \
+{\listtext	29.	}\'a0\cf0 Person person;\cf11 //The mocked object.Note that I am NOT using new to create an instance.\cf4 \
+{\listtext	30.	}\'a0\'a0\
+{\listtext	31.	}\'a0\
+{\listtext	32.	}\'a0\cf10 @Test\cf4 \
+{\listtext	33.	}\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 void
+\f2\b0 \cf4  \cf0 testGetName()\{\cf4 \
+{\listtext	34.	}\'a0\'a0\cf0 Department\'a0 dept = 
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Department();\cf4 \
+{\listtext	35.	}\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Expectations()\{\cf4 \
+{\listtext	36.	}\'a0\'a0\'a0\cf11 //locally defined objects are automatically considered mocked\cf4 \
+{\listtext	37.	}\'a0\'a0\'a0\cf0 \{\cf4 \
+{\listtext	38.	}\'a0\'a0\'a0\'a0\cf0 person.getName();\cf11 //Setting the expected behaviour here. \cf4 \
+{\listtext	39.	}\'a0\'a0\'a0\'a0\cf0 returns(\cf12 "Nandan"\cf0 );\cf11 //Will return Nandan instead of Abhi\cf4 \
+{\listtext	40.	}\'a0\'a0\'a0\cf0 \}\cf4 \
+{\listtext	41.	}\'a0\'a0\cf0 \};\cf4 \
+{\listtext	42.	}\'a0\'a0\'a0\
+{\listtext	43.	}\'a0\'a0\cf0 String name = dept.getPersonName();\cf4 \
+{\listtext	44.	}\'a0\'a0\cf0 assertEquals(\cf12 "Name Should be Nandan"\cf0 ,\cf12 "Nandan"\cf0 ,name);\cf4 \
+{\listtext	45.	}\'a0\'a0\'a0\
+{\listtext	46.	}\'a0\cf0 \}\cf4 \
+\pard\pardeftab720\sl280
+\ls2\ilvl0\cf0 {\listtext	47.	}\}\cf4 \
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1 \cf4 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls3\ilvl0\cf4 {\listtext	1.	}The code is pretty self explanatory, I am mocking the getName() method to return "Nandan" which may take up various forms when you are writing the unit tests.\uc0\u8232 Before we jump onto Verifications, Expectations block is a 
+\f4\i strict checking mechanism
+\f1\i0 -the test run will fail if\'a0\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl360\sa60
+\ls3\ilvl1\cf4 {\listtext	\'95	}The calls in the expectation block are not replayed.\
+{\listtext	\'95	}There is more than one call of the same method\
+{\listtext	\'95	}There is a call for another method\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls3\ilvl0\cf4 {\listtext	2.	}All this can be overcome by using the
+\f4\i\b  NonStrictExpectation
+\f1\i0\b0  class.Go through {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/Expectations.html"}}{\fldrslt \cf3 this}} link for an in depth understanding of the Expectations class.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls3\ilvl0
+\fs28 \cf13 {\listtext	3.	}JMockit Verifications:\cf15 \'a0
+\fs26 \cf4  As the name suggests this class is used to *verify* something after a test method call has taken place. Extending the record-replay model, it becomes record-replay-verify model. Verifications can be used to explicitly check if a call has been made and how many times.Now onto the code....\
+\pard\tx720\pardeftab720\sl360\sa60
+\cf4 \
+\pard\pardeftab720\sl280
+
+\f2 \cf14 /************* "Person.java" *********/\cf4 \
+
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 Person \{\cf4 \
+\'a0\
+\'a0\cf0 String name = \cf12 "Abhi"\cf4  \cf0 ;\cf4 \
+\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getName() \{\cf4 \
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  \cf0 name;\cf4 \
+\'a0\cf0 \}\cf4 \
+\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 void
+\f2\b0 \cf4  \cf0 setName(String name) \{\cf4 \
+\'a0\'a0
+\f3\b \cf9 this
+\f2\b0 \cf0 .name = name;\cf4 \
+\'a0\cf0 \}\cf4 \
+\'a0\
+\cf0 \}\cf4 \
+\cf14 /************* "Department.java" *********/\cf4 \
+
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 Department\{\cf4 \
+\'a0\cf0 Person person = 
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Person();\cf11 //Person is the 'collaborator'- a fancy name for third party object\cf4 \
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getPersonName()\{\cf4 \
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  \cf0 person.getName();\cf4 \
+\'a0\cf0 \}\cf4 \
+\cf0 \}\cf4 \
+\'a0\
+\cf14 /************* "DepartmentTest.java" *********/\cf4 \
+
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 DepartmentTest\{\cf4 \
+\'a0\cf10 @Mocked\cf4 \
+\'a0\cf0 Person person;\cf11 //The mocked object.Note that I am NOT using new to create an instance.\cf4 \
+\'a0\'a0\
+\'a0\
+\'a0\cf10 @Test\cf4 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 void
+\f2\b0 \cf4  \cf0 testGetNameCalls()\{\cf4 \
+\'a0\'a0\cf0 Department dept\'a0 = 
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Department();\cf4 \
+\'a0\'a0\cf0 String name = dept.getPersonName();\cf4 \
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Verifications()\{\cf4 \
+\'a0\'a0\'a0\cf0 \{\cf4 \
+\'a0\'a0\'a0\'a0\cf0 person.getName();\cf11 //verify that this method is called when dept.getPersonName() is invoked\cf4 \
+\'a0\'a0\'a0\cf0 \}\cf4 \
+\'a0\'a0\cf0 \};\cf4 \
+\'a0\cf0 \}\cf4 \
+\cf0 \}\cf4 \
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1 \cf4 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls4\ilvl0\cf4 {\listtext	1.	}We can also specify the constraints for the number of times a method has to be called. Go through {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/Verifications.html"}}{\fldrslt \cf3 this}}\'a0link to understand how 
+\f4\i times,minTimes, and maxTimes
+\f1\i0 \'a0fields can be used.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls4\ilvl0
+\fs28 \cf13 {\listtext	2.	}JMockit Inline MockUps :
+\fs26 \cf4 \'a0This is my personal favourite. And I would say its the most powerful feature of JMockit to 
+\b redefine
+\b0  methods/static blocks/constructors. I will be posting how to do all of that in the coming blogs. As of now, we'll see how to create a inline mockup that redefines a method for our test case.See the JMockit documention of {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/MockUp.html"}}{\fldrslt \cf3 MockUp}} for more information. \
+\pard\tx720\pardeftab720\sl360\sa60
+\cf4 \
+\pard\pardeftab720\sl280
+
+\f2 \cf14 /************* "Person.java" *********/\cf4 \
+
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 Person \{\cf4 \
+\'a0\
+\'a0\cf0 String name = \cf12 "Abhi"\cf4  \cf0 ;\cf4 \
+\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getName() \{\cf4 \
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  \cf0 name;\cf4 \
+\'a0\cf0 \}\cf4 \
+\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 void
+\f2\b0 \cf4  \cf0 setName(String name) \{\cf4 \
+\'a0\'a0
+\f3\b \cf9 this
+\f2\b0 \cf0 .name = name;\cf4 \
+\'a0\cf0 \}\cf4 \
+\'a0\
+\cf0 \}\cf4 \
+\cf14 /************* "Department.java" *********/\cf4 \
+
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 Department\{\cf4 \
+\'a0\cf0 Person person = 
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Person();\cf11 //Person is the 'collaborator'- a fancy name for third party object\cf4 \
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getPersonName()\{\cf4 \
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  \cf0 person.getName();\cf4 \
+\'a0\cf0 \}\cf4 \
+\cf0 \}\cf4 \
+\'a0\
+\cf14 /************* "DepartmentTest.java" *********/\cf4 \
+
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 class
+\f2\b0 \cf4  \cf0 DepartmentTest \{\cf4 \
+\'a0\cf10 @Test\cf4 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  
+\f3\b \cf9 void
+\f2\b0 \cf4  \cf0 testGetNameCalls()\{\cf4 \
+\'a0\'a0\cf0 Department dept\'a0 = 
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 Department();\cf4 \
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf4  \cf0 MockUp<department>()\{\cf4 \
+\'a0\'a0\'a0\cf10 @Mock\cf4  \cf11 //A directive to JMockit to redefine the method. Remember!! \cf4 \
+\'a0\'a0\'a0
+\f3\b \cf9 public
+\f2\b0 \cf4  \cf0 String getPersonName()\{\cf4 \
+\'a0\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf4  
+\f3\b \cf9 null
+\f2\b0 \cf0 ;\cf4 \
+\'a0\'a0\'a0\cf0 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\cf0 \};\cf4 \
+\'a0\'a0\cf0 String name = dept.getPersonName();\cf11 //this call returns a null because of redefinition\cf4 \
+\'a0\'a0\cf0 assertNull(name);\cf4 \
+\'a0\cf0 \}\cf4 \
+\cf0 \}\cf4 \
+\cf0 </department>\cf4 \
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1 \cf4 \
+\
+\pard\pardeftab720
+
+\f0\fs44 \cf2 JMockit Tutorial: How to run a test case with JMockit?\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 \
+\pard\pardeftab720\sl360
+\cf4 This tutorial assumes that the jmockit.jar is already in the projects build path. If you want to know how to do it.You can find it {\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/05/how-to-add-jmockit-to-eclipse-project.html"}}{\fldrslt \cf3 here}}\
+\pard\pardeftab720
+
+\b\fs28 \cf4 \'a0Adding the java agent argument\
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 Since JMockit uses instrumentation apis, we need to add the java agent in the VM argument.\
+\
+Assume the jmockit.jar is present in the directory 
+\b C:\\jmockit\\jmockit.jar 
+\b0 and you will be running 
+\b ViewTest
+\b0  class as a JUnit test. \
+\pard\tx720\pardeftab720\sl360\sa60
+\cf4 \
+\
+\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\b\fs36 \cf3 How to mock constructors in JMockit?}}
+\b\fs28 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 Consider the code below:\
+\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\
+40\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /************************* Person.java ****************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Person \{\
+\'a0\
+\'a0
+\f3\b \cf9 private
+\f2\b0 \cf0  String name;\
+\'a0\'a0\'a0\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  Person()\{\
+\'a0\'a0name = \cf12 "Default Abhi"\cf0 ;\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String getName() \{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  name;\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  setName(String name) \{\
+\'a0\'a0
+\f3\b \cf9 this
+\f2\b0 \cf0 .name = name;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /******************* PersonTestConstructor.java ***********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  PersonTestConstructor \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testGetName() \{\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  MockUp<Person>() \{\
+\'a0\'a0\'a0\cf10 @Mock\cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  $init() \{\
+\'a0\'a0\'a0\'a0\cf11 //Dont assign name variable at all\cf0 \
+\'a0\'a0\'a0\'a0\cf11 //Leave it null\cf0 \
+\'a0\'a0\'a0\}\
+\'a0\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0Person p = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Person();\
+\'a0\'a0String name = p.getName();\
+\'a0\'a0\'a0\
+\'a0\'a0assertNull(\cf12 "Name of person is null"\cf0 ,name);\
+\'a0\}\
+\'a0\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 Here we have a class Person whose default constructor initializes the name variable to "Default Abhi" In the test class PersonTestConstructor, I mock the constructor by using a special mock method 
+\b \cf16 $init
+\b0 \cf17  \cf4 to do nothing.\
+\
+Remember the to put the 
+\b \cf16 @Mock\'a0\cf18  
+\b0 \cf4 annotation above. I have spent hours trying to debug only to find out that I forgot. \
+\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\b\fs36 \cf3 How to mock constructors with parameters (or those that take arguments) ?}}
+\b\fs28 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 \
+Again we use 
+\b \cf19 $init
+\b0 \cf4  to mock the constructor but this time with parameters. \
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /************************* Person.java ****************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Person \{\
+\'a0\
+\'a0
+\f3\b \cf9 private
+\f2\b0 \cf0  String name;\
+\'a0\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  Person(String name)\{\
+\'a0\'a0
+\f3\b \cf9 this
+\f2\b0 \cf0 .name = name;\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String getName() \{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  name;\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  setName(String name) \{\
+\'a0\'a0
+\f3\b \cf9 this
+\f2\b0 \cf0 .name = name;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /******************* PersonTestConstructor.java ***********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  PersonTestConstructor \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testGetName() \{\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  MockUp<Person>() \{\
+\'a0\'a0\'a0\cf10 @Mock\cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  $init(String name) \{\
+\'a0\'a0\'a0\'a0\cf11 //Dont assign name variable at all\cf0 \
+\'a0\'a0\'a0\'a0\cf11 //Leave it null\cf0 \
+\'a0\'a0\'a0\}\
+\'a0\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0Person p = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Person(\cf12 "AbhiJMockit"\cf0 );\
+\'a0\'a0String name = p.getName();\
+\'a0\'a0System.out.println(name);\
+\'a0\'a0assertNull(\cf12 "Name of person is null"\cf0 ,name);\
+\'a0\}\
+\'a0\
+\}\cell \lastrow\row
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\f1\b\fs36 \cf3 How to mock static initialization blocks in JMockit?}}
+\f1\b\fs28 \cf4 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 \
+This time the method to be used is 
+\b \cf19 $clinit
+\b0 \cf4 . If you are bored with 
+\f2 Person
+\f1  and 
+\f2 Employee 
+\f1 classes by now, we'll test the 
+\f2 Bank
+\f1  class this time.\
+\
+In the following example the static initialization block calls a static method and sets the 
+\f2 bankBalance
+\f1  to 100. But in our test case we want to start off with 500.\
+\
+Note the\'a0
+\b \cf19 $clinit\'a0
+\b0 \cf4 method in the 
+\f2 BankTest\'a0
+\f1 class that calls the same method with 500 as the argument.\
+\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /***************** Bank.java ******************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Bank \{\
+\'a0\
+\'a0
+\f3\b \cf9 static
+\f2\b0 \cf0  
+\f3\b \cf9 int
+\f2\b0 \cf0  balanceAmount;\
+\'a0\'a0\
+\'a0\cf11 //Static block begins \cf0 \
+\'a0
+\f3\b \cf9 static
+\f2\b0 \cf0  \{\
+\'a0\'a0updateBalance(\cf20 100\cf0 );\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 static
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  updateBalance(
+\f3\b \cf9 float
+\f2\b0 \cf0  balance) \{\
+\'a0\'a0balanceAmount += balance;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /*********************** BankTest.java **********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  BankTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testBankStaticBlock()\{\
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  MockUp<Bank>()\{\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf10 @SuppressWarnings\cf0 (\cf12 "unused"\cf0 )\
+\'a0\'a0\'a0\cf10 @Mock\cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  $clinit()\{\
+\'a0\'a0\'a0\'a0Bank.updateBalance(\cf20 500\cf0 );\
+\'a0\'a0\'a0\}\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0assertEquals(\cf12 "The balance amount is 500"\cf0 , \cf20 500\cf0 , Bank.balanceAmount);\
+\'a0\'a0\'a0\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 \
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\b\fs36 \cf3 How to mock public methods in JMockit?}}
+\b\fs28 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 There are two ways to can do it:\'a0\
+\
+\'a0
+\b  1. Behaviour Based Testing or using the 
+\f3 Expectations
+\f1  class.
+\b0 \
+\'a0
+\b  2. State Based Testing using the MockUp apis.
+\b0 \
+\
+We'll see both of them below. First using the Expectations class\
+\
+\pard\pardeftab720\sl360
+
+\b \cf4 1. Behaviour Based Testing or using the\'a0
+\f3 Expectations
+\f1 \'a0class.
+\b0 \
+
+\b \
+\pard\pardeftab720\sl360
+
+\b0 \cf4 In this technique we will be creating a 
+\f2 Expectations\'a0
+\f1 anonymous\'a0inner class and define the expected behaviour when a method is invoked with particular arguments.\'a0\
+\
+Lets continue with the Bank example.\'a0\
+\
+This time the 
+\f2 Bank
+\f1  class uses the 
+\f2 DBManager 
+\f1 to retrieve the 
+\b Account Holder Name
+\b0  to process the account.\'a0\
+\
+The Bank's 
+\f2 processAccount()
+\f1  method takes in an 
+\b Account ID
+\b0  and passes it onto the 
+\b DBManager's
+\f2\b0 retrieveAccountHolder()\'a0
+\f1 method\'a0 to get the 
+\b name
+\b0  from the 
+\b DB 
+\b0 and 
+\b returns
+\b0  the same.\
+\
+However we want to 
+\b mask
+\b0  all the DB related code and return a name, say "Abhi" when\'a0
+\f2 retrieveAccountHolder()\'a0
+\f1 is invoked with the 
+\b Account ID
+\b0  
+\b as 10
+\b0 .\'a0\
+\
+The code to achieve all this is given below...\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\
+40\
+41\
+42\
+43\
+44\
+45\
+46\
+47\
+48\
+49\
+50\
+51\
+52\
+53\
+54\
+55\
+56\
+57\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /**************** DBManager.java *************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  DBManager \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String retrieveAccountHolderName(
+\f3\b \cf9 int
+\f2\b0 \cf0  accountId )\{\
+\'a0\'a0String accountHolderName = 
+\f3\b \cf9 null
+\f2\b0 \cf0 ;\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //connect to db\cf0 \
+\'a0\'a0\cf11 //retrieve the\'a0 Account Holder Name\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  accountHolderName;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /**************** Bank.java ****************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Bank \{\
+\'a0\
+\'a0DBManager dbManager =
+\f3\b \cf9 new
+\f2\b0 \cf0  DBManager();\
+\'a0\'a0\
+\'a0\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String processAccount(
+\f3\b \cf9 int
+\f2\b0 \cf0  accountID)\{\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //Some other code goes here\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0String accountHolderName = dbManager.retrieveAccountHolderName(accountID);\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //some more processing code \cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  accountHolderName;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /*************** BankTest.java ****************/\cf0 \
+\'a0\
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  BankTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testRetrieveAccountHolderName() \{\
+\'a0\
+\'a0\'a0Bank bank = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Bank();\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 // Define the Expectations block here\cf0 \
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  Expectations() \{\
+\'a0\
+\'a0\'a0\'a0DBManager dbManager; \cf11 // variables declared here are mocked by default\cf0 \
+\'a0\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0dbManager.retrieveAccountHolderName(\cf20 10\cf0 );\
+\'a0\'a0\'a0\'a0returns(\cf12 "Abhi"\cf0 );\
+\'a0\'a0\'a0\}\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0String name = bank.processAccount(\cf20 10\cf0 );\
+\'a0\'a0\'a0\
+\'a0\'a0assertEquals(\cf12 "Account holder Name for A/C id 10 is 'Abhi' "\cf0 ,\cf12 "Abhi"\cf0 ,name);\
+\'a0\'a0\'a0\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 Notice the\'a0
+\f2 DBManager\'a0
+\f1 is declared within the Expectations class and is mocked by default. However if you wanted to declare it outside the 
+\b test method
+\b0  then it should be annotated with the 
+\b \cf19 @Mocked\'a0
+\b0 \cf4 annotation.\
+\
+Now quick trivia!\
+What would have happened if I placed the 
+\f3\b Bank bank = new Bank()
+\f1\b0  
+\f4\i\b after
+\f1\i0\b0  the\
+expectations block? \'a0Any Guesses?\
+\
+The answer is - "The Test would have failed because of 
+\b UnexpectedInvocation Exception
+\b0 " Why ? The reason -\'a0
+\f3\b Expectations
+\f1 \'a0
+\b0 is a 
+\b strict checking mechanism. 
+\b0 Placing the creation of 
+\b Bank
+\b0 \'a0object
+\b  
+\b0 after the 
+\b Expectations
+\b0 block would have called the constructor of\'a0
+\b DBManager. 
+\b0 But in the Expectations block we have strictly mentioned that :\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls5\ilvl0\cf4 {\listtext	1.	}Only 
+\f3\b retrieveAccountHolderName
+\f1 ()
+\b0  method\'a0 has to be called on the 
+\b dbManager
+\b0  object in the following code.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa60
+\ls5\ilvl0
+\b \cf4 {\listtext	2.	}AND 
+\b0 the argument 
+\b MUST \'a0
+\b0 be 10. Anything other that 10 will throw the same\'a0 
+\b UnexpectedInvocation Exception. 
+\b0 Try this yourself.\
+\ls5\ilvl0
+\b {\listtext	3.	}AND 
+\b0 the method 
+\f3\b retrieveAccountHolderName()
+\f1  
+\b0 can be invoked 
+\b only once
+\b0 !\
+\pard\pardeftab720\sl360
+\cf4 \
+\pard\pardeftab720\sl360
+
+\b \cf4 But
+\b0  then, our test cases may not be so rigid. In that case use the 
+\f3\b NonStrictExpectations 
+\f1\b0 class.\
+It places no restrictions on the number of times the mocked method is called or if any other method of the same object is called. Most of the time you 
+\f4\i\b will 
+\f1\i0\b0 be using\'a0
+\f3\b NonStrictExpectations 
+\f1\b0 class.\
+\
+One last tip before we move onto the 
+\b MockUp 
+\b0 apis. In the previous section point number 2 states that the argument passed must be 10.\
+\
+What to do if we require, when 
+\f4\i\b any 
+\f1\i0 integer
+\b0  is passed into the\'a0
+\f3\b retrieveAccountHolderName
+\f1 () 
+\b0 as an argument the return string should be "Abhi"? For this JMockit provides us with a field called 
+\f4\i\b \cf19 anyInt. 
+\f1\i0\b0 \cf4 \'a0\'a0The line
+\f2 \'a0
+\f3\b dbManager.retrieveAccountHolderName(10)
+\f2\b0 \'a0
+\f1 should\'a0be replaced with\'a0
+\f3\b dbManager.retrieveAccountHolderName(
+\f5\i anyInt
+\f3\i0 ).\'a0
+\f1\b0 We will look into more of this in {\field{\*\fldinst{HYPERLINK "http://www.blogger.com/blogger.g?blogID=666801272201508188#utils"}}{\fldrslt 
+\b \cf3 this}} section.\
+\
+
+\b 2. State Based Testing using the MockUp apis.
+\b0 \
+If you have already read {\field{\*\fldinst{HYPERLINK "http://www.blogger.com/blogger.g?blogID=666801272201508188#constructor"}}{\fldrslt \cf3 "How to mock constructors in Jmockit?"}} you would have seen the 
+\b MockUp 
+\b0 class in action.\
+\
+MockUp apis are categorized as 
+\b State Based 
+\b0 testing because the mocks you write are 
+\b not
+\b0  dependent on\'a0the behaviour of the test class. They are defined independently and work the same in any case.\
+\
+In the code below observe how the 
+\b MockUp
+\b0  class redefines the
+\b method\'a0
+\f3 retrieveAccountHolderName()\'a0
+\f1\b0 of\'a0class DBManager.\
+\
+This is a great utility if only 
+\b some
+\b0  methods of a class need to be 
+\b redefined
+\b0 .\
+\
+\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\
+40\
+41\
+42\
+43\
+44\
+45\
+46\
+47\
+48\
+49\
+50\
+51\
+52\
+53\
+54\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /**************** DBManager.java *************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  DBManager \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String retrieveAccountHolderName(
+\f3\b \cf9 int
+\f2\b0 \cf0  accountId )\{\
+\'a0\'a0String accountHolderName = 
+\f3\b \cf9 null
+\f2\b0 \cf0 ;\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //connect to db\cf0 \
+\'a0\'a0\cf11 //retrieve the\'a0 Account Holder Name\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  accountHolderName;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /**************** Bank.java ****************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Bank \{\
+\'a0\
+\'a0DBManager dbManager =
+\f3\b \cf9 new
+\f2\b0 \cf0  DBManager();\
+\'a0\'a0\
+\'a0\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String processAccount(
+\f3\b \cf9 int
+\f2\b0 \cf0  accountID)\{\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //Some other code goes here\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0String accountHolderName = dbManager.retrieveAccountHolderName(accountID);\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //some more processing code \cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  accountHolderName;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /**************** BankTest.java ****************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  BankTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testBankProcessAccount() \{\
+\'a0\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  MockUp<DBManager>() \{\
+\'a0\
+\'a0\'a0\'a0\cf10 @SuppressWarnings\cf0 (\cf12 "unused"\cf0 )\
+\'a0\'a0\'a0\cf10 @Mock\cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String retrieveAccountHolderName(
+\f3\b \cf9 int
+\f2\b0 \cf0  accountId )\{\
+\'a0\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "Abhi"\cf0 ;\
+\'a0\'a0\'a0\}\
+\'a0\'a0\};\
+\'a0\
+\'a0\'a0Bank bank = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Bank();\
+\'a0\'a0\'a0\
+\'a0\'a0String name = bank.processAccount(\cf20 20\cf0 );\
+\'a0\'a0\'a0\
+\'a0\'a0assertEquals(\cf12 "Account holder Name for A/C id 20 is 'Abhi' "\cf0 ,\cf12 "Abhi"\cf0 ,name);\
+\'a0\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 \
+\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\b\fs36 \cf3 How to mock private methods in JMockit?}}
+\b\fs28 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 Pretty cool, isn't it? To be able to modify private methods?\
+\
+The follwing two examples will give you how a private method is redefined first by using the 
+\b Expectations
+\b0  api and then the MockUp api.\
+\
+First the Expectation API. \'a0Yes of course, we can't call the private method directly in our Test class. 
+\b BUT 
+\b0 JMockit offers a neat 
+\b Reflection Utility 
+\b0 called the 
+\b Deencapsulation
+\b0  class. \
+\
+This class has 
+\b static methods 
+\b0 that can invoke private methods and access private fields.More about it {\field{\*\fldinst{HYPERLINK "http://www.blogger.com/blogger.g?blogID=666801272201508188#test_private_method"}}{\fldrslt \cf3 later}} \
+\
+\pard\pardeftab720\sl360
+
+\b \cf4 The Expectations Way
+\b0 \
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12840\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /****************** Simple.java ***********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Simple \{\
+\'a0\
+\'a0\
+\'a0
+\f3\b \cf9 private
+\f2\b0 \cf0  String iAmPrivate()\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "Private Method"\cf0 ;\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String publicCallsPrivate()\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  iAmPrivate();\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /**************** SimpleTest.java *********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  SimpleTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testPublicInvokesPrivate()\{\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //Make simple final to be used in the Expectations inner class\cf0 \
+\'a0\'a0
+\f3\b \cf9 final
+\f2\b0 \cf0  Simple simple =\'a0 
+\f3\b \cf9 new
+\f2\b0 \cf0  Simple();\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 //pass simple as argument to make it a Mocked type\cf0 \
+\'a0\'a0\cf11 //in the Expectations class\cf0 \
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  Expectations(simple)\{\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0Deencapsulation.invoke(simple, \cf12 "iAmPrivate"\cf0 );\
+\'a0\'a0\'a0\'a0returns(\cf12 "I got INVOKED"\cf0 );\
+\'a0\'a0\'a0\}\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0String str = simple.publicCallsPrivate();\
+\'a0\'a0assertEquals(\cf12 "The returned string is - I got INVOKED"\cf0 ,\cf12 "I got INVOKED"\cf0 ,str);\
+\'a0\}\
+\'a0\'a0\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 \
+\pard\pardeftab720\sl360
+
+\b \cf4 Now for the MockUp way
+\b0 \
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /****************** Simple.java ***********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Simple \{\
+\'a0\
+\'a0\
+\'a0
+\f3\b \cf9 private
+\f2\b0 \cf0  String iAmPrivate()\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "Private Method"\cf0 ;\
+\'a0\}\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String publicCallsPrivate()\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  iAmPrivate();\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /**************** SimpleTest.java *********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  SimpleTest \{\
+\'a0\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testPublicInvokesPrivateMockUp()\{\
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  MockUp<Simple>()\{\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf11 //Override the private method\cf0 \
+\'a0\'a0\'a0\cf11 //Dont provide any ACCESSS MODIFIER!\cf0 \
+\'a0\'a0\'a0\cf10 @Mock\cf0 \
+\'a0\'a0\'a0String iAmPrivate()\{\
+\'a0\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "MockUp Invoke"\cf0 ;\
+\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0Simple simple = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Simple();\
+\'a0\'a0\'a0\
+\'a0\'a0String str = simple.publicCallsPrivate();\
+\'a0\'a0assertEquals(\cf12 "String returned - MockUp Invoke"\cf0 ,\cf12 "MockUp Invoke"\cf0 ,str);\
+\'a0\'a0\'a0\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\f1\b\fs36 \cf3 How to mock static methods in JMockit?}}
+\f1\b\fs28 \cf4 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 Again we will see how to mock a static method by using the Expectations and MockUp apis. \
+\
+\pard\pardeftab720\sl360
+
+\b \cf4 The Expectations Way 
+\b0 \
+\
+The only thing to be done is to mark the field in the test class with 
+\b \cf19 @Mocked\cf4  
+\b0 or create a local variable in the anonymous Expectations class.\
+\
+Lets go back to the 
+\b Bank 
+\b0 example. Our 
+\b Bank
+\b0  class has a method called 
+\b makeConection() 
+\b0 that internally calls
+\b DBManager's getConnectionString() static
+\b0  method. However when we write the test method we want the
+\b getConnectionString()
+\b0  to return altogether a different String.\
+\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\
+40\
+41\
+42\
+43\
+44\
+45\
+46\
+47\
+48\
+49\
+50\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /********** DBManager.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  DBManager \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 static
+\f2\b0 \cf0  String getConnectionString()\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "ORIGINAL"\cf0 ;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /********** Bank.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Bank \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String makeConnection()\{\
+\'a0\'a0\cf11 //some connection related code\cf0 \
+\'a0\'a0\cf11 //goes here\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 // call to static method\cf0 \
+\'a0\'a0String conStr = DBManager.getConnectionString();\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 // If the connection String \cf0 \
+\'a0\'a0\cf11 // is anything other than\cf0 \
+\'a0\'a0\cf11 // ORIGINAL return FAIL \cf0 \
+\'a0\'a0
+\f3\b \cf9 if
+\f2\b0 \cf0 (conStr.equals(\cf12 "ORIGINAL"\cf0 ))\
+\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "SUCCESS"\cf0 ;\
+\'a0\'a0
+\f3\b \cf9 else
+\f2\b0 \cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "FAIL"\cf0 ;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /********** BankTest.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  BankTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testMakeConnection()\{\
+\'a0\'a0\'a0\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  NonStrictExpectations()\{\
+\'a0\'a0\'a0\cf11 // DBManager is mocked here\cf0 \
+\'a0\'a0\'a0DBManager dbManager;\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0DBManager.getConnectionString();\
+\'a0\'a0\'a0\'a0returns(\cf12 "DUPLICATE"\cf0 );\
+\'a0\'a0\'a0\}\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0Bank bank =\'a0 
+\f3\b \cf9 new
+\f2\b0 \cf0  Bank();\
+\'a0\'a0String status = bank.makeConnection();\
+\'a0\'a0\'a0\
+\'a0\'a0assertEquals(\cf12 "Status is FAIL"\cf0 ,\cf12 "FAIL"\cf0 ,status);\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 \
+\
+\pard\pardeftab720\sl360
+
+\b \cf4 Now For the MockUp Way.....
+\b0  \
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\
+40\
+41\
+42\
+43\
+44\
+45\
+46\
+47\
+48\
+49\
+50\
+51\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /********** DBManager.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  DBManager \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 static
+\f2\b0 \cf0  String getConnectionString()\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "ORIGINAL"\cf0 ;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /********** Bank.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Bank \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String makeConnection()\{\
+\'a0\'a0\cf11 //some connection related code\cf0 \
+\'a0\'a0\cf11 //goes here\cf0 \
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 // call to static method\cf0 \
+\'a0\'a0String conStr = DBManager.getConnectionString();\
+\'a0\'a0\'a0\
+\'a0\'a0\cf11 // If the connection String \cf0 \
+\'a0\'a0\cf11 // is anything other than\cf0 \
+\'a0\'a0\cf11 // ORIGINAL return FAIL \cf0 \
+\'a0\'a0
+\f3\b \cf9 if
+\f2\b0 \cf0 (conStr.equals(\cf12 "ORIGINAL"\cf0 ))\
+\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "SUCCESS"\cf0 ;\
+\'a0\'a0
+\f3\b \cf9 else
+\f2\b0 \cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "FAIL"\cf0 ;\
+\'a0\}\
+\}\
+\'a0\
+\cf14 /********** BankTest.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  BankTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 \
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testMakeConnectionWithMockUp()\{\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  MockUp<DBManager>()\{\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\cf11 // Redefine the method here\cf0 \
+\'a0\'a0\'a0\cf11 // But With No static modifier\cf0 \
+\'a0\'a0\'a0\cf10 @Mock\cf0 \
+\'a0\'a0\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String getConnectionString()\{\
+\'a0\'a0\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "DUPLICATE"\cf0 ;\
+\'a0\'a0\'a0\}\
+\'a0\
+\'a0\'a0\};\
+\'a0\'a0\'a0\
+\'a0\'a0Bank bank =\'a0 
+\f3\b \cf9 new
+\f2\b0 \cf0  Bank();\
+\'a0\'a0String status = bank.makeConnection();\
+\'a0\'a0\'a0\
+\'a0\'a0\'a0\
+\'a0\'a0assertEquals(\cf12 "Status is FAIL"\cf0 ,\cf12 "FAIL"\cf0 ,status);\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\f1\b\fs36 \cf3 How to invoke or test private methods in JMockit?}}
+\f1\b\fs28 \cf4 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 If you have read the previous "How to"s, you already know the answer - its the {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/Deencapsulation.html"}}{\fldrslt \cf3 Deencapsulation}} class.\
+\
+There may be a private method you want to test. Generally if you read any article-they'll usually advise to move it to more broader visibility. I personally wont agree to this.\
+\
+If you are stuck with writing test methods for legacy code, you cant just refactor the code and check it in. The latter is a mammoth process in itself.\
+\
+Another option is to use the native reflection api's provided by java. I've tried this. It becomes a bowl of hot vegetable noodles you wont be able to handle later on.\
+\
+Back to Deencapsulation class! The most used methods are {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/Deencapsulation.html#invoke%28java.lang.Object,%20java.lang.String,%20java.lang.Object...%29"}}{\fldrslt \cf3 invoke()}} , {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/Deencapsulation.html#setField%28java.lang.Object,%20java.lang.String,%20java.lang.Object%29"}}{\fldrslt \cf3 setField()}} and the {\field{\*\fldinst{HYPERLINK "http://jmockit.googlecode.com/svn/trunk/www/javadoc/mockit/Deencapsulation.html#getField%28java.lang.Object,%20java.lang.String%29"}}{\fldrslt \cf3 getField()}}.\
+The names are pretty intuitive and you'll be using them all over your junits when dealing with private variables and methods.\
+\
+\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "https://www.blogger.com/null"}}{\fldrslt 
+\b\fs36 \cf3 How to throw Exceptions in an Expectations block?}}
+\b\fs28 \
+\pard\pardeftab720\sl360
+
+\b0\fs26 \cf4 Till now we have been returning an object or some literal when we mock a method. What if we want to throw an Exception? There's a substitute for the 
+\b returns()
+\b0  method we've been using in all the Expectations blocks till now.\
+\
+We could have replaced it with something called 
+\b result = [return object]
+\b0 . The following example shows where we throw an exception in the 
+\b Expectations
+\b0  block.\
+\
+\
+\pard\pardeftab720\sl220\qc
+{\field{\*\fldinst{HYPERLINK "http://abhinandanmk.blogspot.in/2012/06/jmockit-tutoriallearn-it-today-with.html#"}}{\fldrslt 
+\f2\fs20 \cf6 \cb7 ?}}
+\f2\fs20 \cf6 \cb7 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth12760\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\qr
+
+\fs26 \cf8 \cb1 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\cell 
+\pard\intbl\itap1\pardeftab720\sl280
+\cf14 /********** Bank.java **************/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  Bank \{\
+\'a0\'a0\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  String getConnection() 
+\f3\b \cf9 throws
+\f2\b0 \cf0  Exception\{\
+\'a0\'a0
+\f3\b \cf9 return
+\f2\b0 \cf0  \cf12 "Connection"\cf0 ;\
+\'a0\'a0\cf11 //some thing here might throw an exception\cf0 \
+\'a0\}\
+\} \
+\'a0\
+\cf14 /********** BankTest.java **********/\cf0 \
+
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 class
+\f2\b0 \cf0  BankTest \{\
+\'a0\
+\'a0\cf10 @Test\cf0 (expected=Exception.
+\f3\b \cf9 class
+\f2\b0 \cf0 )\
+\'a0
+\f3\b \cf9 public
+\f2\b0 \cf0  
+\f3\b \cf9 void
+\f2\b0 \cf0  testGetConnection() 
+\f3\b \cf9 throws
+\f2\b0 \cf0  Exception\{\
+\'a0\'a0
+\f3\b \cf9 final
+\f2\b0 \cf0  Bank bank = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Bank();\
+\'a0\'a0
+\f3\b \cf9 new
+\f2\b0 \cf0  Expectations(bank)\{\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0bank.getConnection();\
+\'a0\'a0\'a0\'a0result = 
+\f3\b \cf9 new
+\f2\b0 \cf0  Exception();\
+\'a0\'a0\'a0\}\
+\'a0\'a0\};\
+\'a0\'a0bank.getConnection();\
+\'a0\}\
+\}\cell \lastrow\row
+\pard\pardeftab720\sl360
+
+\f1 \cf4 Notice the use of the 
+\b result = new Exception()
+\b0  in the Expectations block. In this I anticipated an Exception to be thrown and have stated that in the @Test annotation.\
+In the\'a0
+\b  MockUp 
+\b0 api its straightforward, you just need to redefine the method to 
+\b throw new Exception()
+\b0 .\
+\pard\tx720\pardeftab720\sl360\sa60
+\cf4 \
+\
+\
+\
+\
+\
+TestNG Annotations\
+===============\
+\
+--------------------------------------------------------------------------->  Before Suite\
+\pard\pardeftab720
+
+\f6\fs24 \cf0 <suite name="First Suite" verbose="1" >\
+\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  Before Test
+\f6\fs24 \cf0 \
+\pard\pardeftab720
+\cf0       <test name="First Test" >\
+	
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  Before Class
+\f6\fs24 \cf0 \
+        <classes>\
+          <class name="test.beforeafter.TestClass" >\
+		
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  Before Group Test\
+		--------------------------------------------------------------------------->  Before Method
+\f6\fs24 \cf0 \
+            <methods>\
+              <include name="testOneMethod"/>\
+  </methods>\
+	
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Group Test\
+		--------------------------------------------------------------------------->  After Method
+\f6\fs24 \cf0 \
+</class>\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Class
+\f6\fs24 \cf0 \
+\pard\pardeftab720
+\cf0 </classes>\
+</test>\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Test\
+\
+--------------------------------------------------------------------------->  Before Test
+\f6\fs24 \cf0 \
+\pard\pardeftab720
+\cf0 <test name="Second Test" >\
+  <classes>\
+ 
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  Before Class
+\f6\fs24 \cf0 \
+    <class name="test.beforeafter.TestClass" >\
+	
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  Before Group Test\
+		--------------------------------------------------------------------------->  Before Method
+\f6\fs24 \cf0 \
+      <methods>\
+        <include name="testTwoMethod"/>\
+      </methods>\
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Group Test\
+		--------------------------------------------------------------------------->  After Method
+\f6\fs24 \cf0 \
+\
+    </class>\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Class
+\f6\fs24 \cf0 \
+\pard\pardeftab720
+\cf0   </classes>\
+      </test>\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Test
+\f6\fs24 \cf0 \
+\pard\pardeftab720
+\cf0     </suite>\
+\pard\tx720\pardeftab720\sl360\sa60
+
+\f1\fs26 \cf4 --------------------------------------------------------------------------->  After Suite\
+\
+\
+\
+\
+\
+--->  
+\f7\fs30 \cf0 dependency on test methods can only be mentioned for test methods that belong to the same class or any of the inherited base classes.
+\f6\fs24 \
+
+\f1\fs26 \cf4 ---> 
+\f7\fs30 \cf0 TestNG by default executes methods based on the ascending order of their names\
+---> In case you need a test method that exists in a separate class; you can achieve this by assigning the said test method to a group and configuring the dependent test method to be dependent on the said group.
+\f6\fs24 \
+
+\f1\fs26 \cf4 \
+\
+--> Factory:\
+---------------\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls6\ilvl0
+\f6\fs24 \cf0 {\listtext	.	} public class SimpleTestFactory \{\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls6\ilvl0
+\f8 \cf0 {\listtext	.	}\uc0\u8232 
+\f6          @Factory\
+{\listtext	.	}         public Object[] factoryMethod()\{\
+{\listtext	.	}\
+\pard\pardeftab720
+\cf0 		return new Object[]\{\
+      		new SimpleTest(),\
+      	           new SimpleTest()\
+        \};\
+\pard\pardeftab720\sa240
+\cf0 \} \}\
+\
+\pard\pardeftab720\sa240
+
+\f7\fs30 \cf0 The preceding class defines a factory method inside it. A factory method is defined by declaring 
+\f6\fs26 @Factory 
+\f7\fs30 above the respective test method. It's mandatory that a factory method should return an array of 
+\f6\fs26 Object 
+\f7\fs30 class (Object 
+\f6\fs26 []) 
+\f7\fs30 as mentioned in the preceding code snippet.
+\f6\fs24 \
+
+\f7\fs30 As you can see in the preceding test results, the test method from the 
+\f6\fs26 SimpleTestFactory 
+\f7\fs30 class was executed two times. The execution is based on the 
+\f6\fs26 Object 
+\f7\fs30 array returned by the factory method. As the said method returns two objects of the 
+\f6\fs26 SimpleTest 
+\f7\fs30 class, TestNG looks inside the specified returned object and executes all the test methods inside it. In this case, as there was only one test method, TestNG executes the respective test method.\
+\
+\
+-- Example of Factory with DataProvider\
+\
+\pard\pardeftab720
+
+\f6\fs24 \cf0 package test.classes;\
+   import org.testng.annotations.DataProvider;\
+   import org.testng.annotations.Factory;\
+   import org.testng.annotations.Test;\
+   public class DataProviderConsTest \{\
+\
+     private int param;\
+\
+     @Factory(dataProvider="dataMethod")\
+     public DataProviderConsTest(int param)\{\
+       this.param=param;\
+     \}\
+\
+     @DataProvider\
+     public static Object[][] dataMethod()\{\
+       return new Object[][]\{\
+           \{0\},\
+\pard\pardeftab720\sa240
+\cf0 \{1\} \};\
+\pard\pardeftab720
+\cf0      \}\
+\
+\
+     @Test\
+     public void testMethodOne()\{\
+       int opValue=param+1;\
+       System.out.println("Test method one output: "+ opValue);\
+     \}\
+\
+\
+     @Test\
+     public void testMethodTwo()\{\
+       int opValue=param+2;\
+       System.out.println("Test method two output: "+ opValue);\
+     \}\
+\pard\pardeftab720\sa240
+\cf0 \}\
+\
+OutPut:\
+--------\
+\pard\pardeftab720
+\cf0 Test method one output: 2\
+Test method one output: 1\
+Test method one output: 3\
+Test method one output: 2\
+\pard\pardeftab720\sa240
+\cf0 \
+\pard\pardeftab720\sa240
+
+\f7\fs30 \cf0 The 
+\f6\fs26 @Factory 
+\f7\fs30 annotation is applied to the constructor of the test class. This initializes the test class multiple times depending upon the number of values provided by the DataProvider method. If there is an increase or decrease in the datasets that are provided, it will reflect test class initialization accordingly.
+\f6\fs24 \
+\pard\pardeftab720\sa240
+
+\f9\fs46 \cf0 DataProvider or Factory
+\f6\fs24 \
+\pard\pardeftab720\sa240
+
+\f7\fs30 \cf0 Many people get confused when they read about the 
+\f6\fs26 DataProvider 
+\f7\fs30 and 
+\f6\fs26 @Factory 
+\f7\fs30 annotations \'96 what to use when? and what is better?
+\f6\fs24 \
+
+\f7\fs30 Let's take a look at both of their functionalities:
+\f6\fs24 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240
+\ls7\ilvl0
+\f10\fs18 \cf0 		\uc0\u139  \'ca
+\f7\fs30 DataProvider: A test method that uses DataProvider will be executed a multiple number of times based on the data provided by the DataProvider. The test method will be executed using the same instance of the test class to which the test method belongs. 
+\f6\fs24 \
+\ls7\ilvl0
+\f10\fs18 		\uc0\u139  \'ca
+\f7\fs30 Factory: A factory will execute all the test methods present inside a test class using a separate instance of the respective class. \
+\pard\tx720\pardeftab720\sa240
+
+\f6\fs24 \cf0 \
+Parallelism\
+--------------\
+---> 
+\f7\fs30 The 
+\f6\fs26 parallelism can 
+\f7\fs30 be done for each class, each method, or for each test in the suite. The 
+\f6\fs26 thread-count 
+\f7\fs30 attribute is used to configure the maximum number of threads to be spawned for each suite.
+\f6\fs24 \
+----> 
+\f7\fs30 There are two main ways to generate a report with TestNG:
+\f6\fs24 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240
+\ls8\ilvl0
+\f10\fs18 \cf0 		\uc0\u139  \'ca
+\f7\fs30 Listeners: For implementing a listener class, the class has to implement the 
+\f6\fs26 org. testng.ITestListener 
+\f7\fs30 interface. These classes are notified at runtime by TestNG when the test starts, finishes, fails, skips, or passes. 
+\f6\fs24 \
+\ls8\ilvl0
+\f10\fs18 		\uc0\u139  \'ca
+\f7\fs30 Reporters: For implementing a reporting class, the class has to implement an 
+\f6\fs26 org. testng.IReporter 
+\f7\fs30 interface. These classes are called when the whole suite run ends. The object containing the information of the whole test run is passed to this class when called. 
+\f6\fs24 \
+\pard\tx720\pardeftab720\sa240
+\cf0 \
+\
+Appium:\
+======\
+Xcode: 4.5.2\
+Appium: 0.10.1\
+MAc OSX:  10.7.5\
+\
+run below two commands after installing command line tools:\
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer\
+sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer\
+\pard\pardeftab720
+
+\f11\fs22 \cf0 DesiredCapabilities desiredCapabilities = \cf21 new\cf0  DesiredCapabilities();\
+desiredCapabilities.setCapability(\cf22 "device"\cf0 , \cf22 "iPhone Simulator"\cf0 );\
+desiredCapabilities.setCapability(\cf22 "version"\cf0 , \cf22 "6.0"\cf0 );\
+desiredCapabilities.setCapability(\cf22 "app"\cf0 , \cf22 "safari"\cf0 );
+\f6\fs24 \
+
+\f11\fs22 URL url = \cf21 new\cf0  URL(\cf22 "http://localhost:4723/wd/hub"\cf0 );\
+WebDriver remoteWebDriver = \cf21 new\cf0  RemoteWebDriver(url, desiredCapabilities);\
+\
+\
+\
+\pard\pardeftab720\sa240
+
+\f6\fs30 \cf0 -->  
+\b\fs24 -nodeTimeout
+\b0\fs30 \
+This parameter is set when registering a node with a hub. The value provided to these parameters is the time in seconds that a hub can actually wait before it terminates a test script execution on a node if the test script doesn't perform any kind of activity on\uc0\u8232 the node.
+\fs24 \
+\pard\pardeftab720
+
+\b \cf0 java -jar selenium-server-standalone-2.33.0.jar -role node -hub\
+  http://172.16.87.131:1111/grid/register -nodeTimeout 300\
+\
+-->  \'96browserTimeout\
+\
+\pard\pardeftab720\sa240
+
+\b0\fs30 \cf0 This configuration is to let the node know how long it should wait before it ends a test script session when the browser seems to hang. Beyond this time, the node will abort the browser session and start with the next waiting test script. The configuration parameter for this is 
+\fs26 browserTimeout. 
+\fs30 The command to specify that is as follows:
+\fs24 \
+\pard\pardeftab720
+
+\b \cf0 \
+\pard\pardeftab720
+
+\f1\b0\fs26 \cf4 \
+}
